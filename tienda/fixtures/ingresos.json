@@ -1,0 +1,42 @@
+[
+  {
+    "model": "tienda.ingreso",
+    "pk": 1,
+    "fields": {
+      "fecha": "2024-01-15T10:00:00Z",
+      "total": 2500.00,
+      "estado": "Completado",
+      "usuario": 1
+    }
+  },
+  {
+    "model": "tienda.ingreso",
+    "pk": 2,
+    "fields": {
+      "fecha": "2024-01-16T14:30:00Z",
+      "total": 1800.50,
+      "estado": "Completado", 
+      "usuario": 2
+    }
+  },
+  {
+    "model": "tienda.ingreso",
+    "pk": 3,
+    "fields": {
+      "fecha": "2024-01-17T09:15:00Z",
+      "total": 3200.75,
+      "estado": "Pendiente",
+      "usuario": 1
+    }
+  },
+  {
+    "model": "tienda.ingreso",
+    "pk": 4,
+    "fields": {
+      "fecha": "2024-01-18T16:45:00Z",
+      "total": 950.00,
+      "estado": "Completado",
+      "usuario": 2
+    }
+  }
+]

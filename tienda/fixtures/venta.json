@@ -1,0 +1,22 @@
+[
+    {
+    "model": "tienda.venta",
+    "pk": 1,
+    "fields": {
+      "usuario": 1,
+      "fecha": "2025-11-03T10:30:00Z",
+      "total": 1450.0,
+      "estado": "Pagado"
+    }
+  },
+  {
+    "model": "tienda.venta",
+    "pk": 2,
+    "fields": {
+      "usuario": 2,
+      "fecha": "2025-11-05T14:45:00Z",
+      "total": 250.0,
+      "estado": "Pagado"
+    }
+  }
+]

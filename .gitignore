@@ -1,0 +1,144 @@
+# Archivo de pruebas frontend reglas de reprogramación
+flujo_reglas_reprogramacion_frontend.txt
+# No subir configuración global ni cspell
+cspell.json
+condominio/configuracionglobalreprogramacion.py
+# ======================================
+# 🚫 GITIGNORE PARA PROYECTO DJANGO
+# ======================================
+
+# ======================================
+# 🐍 PYTHON
+# ======================================
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# ======================================
+# 🌐 DJANGO
+# ======================================
+# Base de datos
+# .sqlite3
+db.sqlite3
+
+# Configuraciones locales
+local_settings.py
+settings_local.py
+
+# Logs
+*.log
+
+# ======================================
+# 🚫 EXCLUIR TESTS Y GUÍAS LOCALES
+# ======================================
+# Archivos de test
+test_*.py
+*_test.py
+test_requests.py
+test_reservas_endpoint.py
+test_viewset.py
+tmp_debug_post_ticket.py
+
+# Carpeta de pagos (guías y docs locales)
+pagos/
+
+# Media files (archivos subidos)
+media/
+soporte/
+
+# Static files (archivos estáticos recolectados)
+staticfiles/
+
+# ======================================
+# 🔒 SEGURIDAD
+# ======================================
+# Variables de entorno
+.env
+.environment
+
+# Archivos de configuración sensibles
+config.json
+credentials.json
+secrets.json
+
+# ======================================
+# �️ ENTORNO DE DESARROLLO
+# ======================================
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Configuración local de VS Code y herramientas
+CONFIGURACION_GLOBAL_VSCODE.json
+cspell.json
+
+# ======================================
+# � SISTEMA
+# ======================================
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# ======================================
+# 📝 TEMPORALES
+# ======================================
+*.tmp
+*.bak
+*.backup
+
+# Ignore all .txt files except requirements.txt (so only requirements.txt gets pushed)
+*.txt
+!requirements.txt
+
+# Ignore local test scripts used during development
+scripts/
+scripts/*.py
+scripts/*.ps1
+scripts/*.log
+scripts/*.tmp
+
+# ======================================
+# 🧪 PRUEBAS Y TESTING
+# ======================================
+# Carpeta de pruebas de Postman (no subir al repositorio)
+pruebas_postman/
+pruebas_postman/**/*
+*.postman_collection.json
+*.postman_environment.json
+
+# Archivos de prueba locales
+test_*.json
+prueba_*.json
+*_test.json
+
+# Archivos grandes
+*.pdf
+*.xlsx
+*.csv
+*.zip
+
+# Modelos de ML (archivos grandes)
+*.joblib
+scikit_learn_ia/model/*.joblib
+scikit_learn_ia/model/panel_producto_cantidades.joblib
+scikit_learn_ia/model/panel_cliente_cantidades.joblib
+
+# modelos y artefactos pesados
+scikit_learn_ia/model/*.joblib
+scikit_learn_ia/model/*.pkl
+scikit_learn_ia/datasets/reporte_*.pdf
+scikit_learn_ia/datasets/reporte_*.xlsx
+scikit_learn_ia/datasets/pred_*.csv

@@ -1,0 +1,23 @@
+[
+
+  {
+    "model": "tienda.pago",
+    "pk": 1,
+    "fields": {
+      "monto": 1450.0,
+      "fecha": "2023-05-01T12:00:00Z",
+      "stripe_key": "stripe_abc123",
+      "venta": 1
+    }
+  },
+  {
+    "model": "tienda.pago",
+    "pk": 2,
+    "fields": {
+      "monto": 250.0,
+      "fecha": "2023-05-02T14:00:00Z",
+      "stripe_key": "stripe_def456",
+      "venta": 2
+    }
+  }
+]

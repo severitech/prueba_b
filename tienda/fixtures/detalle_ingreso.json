@@ -1,0 +1,102 @@
+[
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 1,
+    "fields": {
+      "ingreso": 1,
+      "producto": 1,
+      "cantidad": 5,
+      "precio_unitario": 350.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 2,
+    "fields": {
+      "ingreso": 1,
+      "producto": 3,
+      "cantidad": 10,
+      "precio_unitario": 65.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 3,
+    "fields": {
+      "ingreso": 1,
+      "producto": 5,
+      "cantidad": 8,
+      "precio_unitario": 120.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 4,
+    "fields": {
+      "ingreso": 2,
+      "producto": 2,
+      "cantidad": 3,
+      "precio_unitario": 180.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 5,
+    "fields": {
+      "ingreso": 2,
+      "producto": 7,
+      "cantidad": 6,
+      "precio_unitario": 280.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 6,
+    "fields": {
+      "ingreso": 3,
+      "producto": 4,
+      "cantidad": 4,
+      "precio_unitario": 380.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 7,
+    "fields": {
+      "ingreso": 3,
+      "producto": 8,
+      "cantidad": 12,
+      "precio_unitario": 110.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 8,
+    "fields": {
+      "ingreso": 4,
+      "producto": 6,
+      "cantidad": 2,
+      "precio_unitario": 420.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 9,
+    "fields": {
+      "ingreso": 4,
+      "producto": 9,
+      "cantidad": 7,
+      "precio_unitario": 95.00
+    }
+  },
+  {
+    "model": "tienda.detalleingreso",
+    "pk": 10,
+    "fields": {
+      "ingreso": 4,
+      "producto": 11,
+      "cantidad": 5,
+      "precio_unitario": 150.00
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "model": "tienda.detalleventa",
+    "pk": 1,
+    "fields": {
+      "venta": 1,
+      "producto_id": 1,
+      "cantidad": 1,
+      "subtotal": 1200.0
+    }
+  },
+  {
+    "model": "tienda.detalleventa",
+    "pk": 2,
+    "fields": {
+      "venta": 1,
+      "producto_id": 3,
+      "cantidad": 2,
+      "subtotal": 160.0
+    }
+  },
+  {
+    "model": "tienda.detalleventa",
+    "pk": 3,
+    "fields": {
+      "venta": 2,
+      "producto_id": 2,
+      "cantidad": 1,
+      "subtotal": 250.0
+    }
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "model": "tienda.categoria",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Electrodomésticos"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 2,
+    "fields": {
+      "descripcion": "Cocina"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 3,
+    "fields": {
+      "descripcion": "Lavandería"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 4,
+    "fields": {
+      "descripcion": "Cuidado del hogar"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 5,
+    "fields": {
+      "descripcion": "Entretenimiento y Tecnología"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 6,
+    "fields": {
+      "descripcion": "Climatización"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 7,
+    "fields": {
+      "descripcion": "Cuidado personal"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 8,
+    "fields": {
+      "descripcion": "Cocina y Preparación de Bebidas"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 9,
+    "fields": {
+      "descripcion": "Electrodomésticos inteligentes"
+    }
+  },
+  {
+    "model": "tienda.categoria",
+    "pk": 10,
+    "fields": {
+      "descripcion": "Pequeños electrodomésticos"
+    }
+  }
+
+
+  
+
+
+]

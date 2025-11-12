@@ -1,0 +1,24 @@
+[
+  {
+    "model": "tienda.promocion",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Descuentos especiales en electrodomésticos",
+      "fecha_inicio": "2024-01-01",
+      "fecha_fin": "2024-12-31",
+      "estado": true,
+      "monto": 15.00
+    }
+  },
+    {
+        "model": "tienda.promocion",
+        "pk": 2,
+        "fields": {
+        "descripcion": "Ofertas de temporada en ropa y accesorios",
+        "fecha_inicio": "2024-06-01",
+        "fecha_fin": "2024-06-30",
+        "estado": true,
+        "monto": 10.00
+        }
+    }
+]

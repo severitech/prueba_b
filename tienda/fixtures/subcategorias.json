@@ -1,0 +1,250 @@
+[
+     {
+    "model": "tienda.subcategoria",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Hornos",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 2,
+    "fields": {
+      "descripcion": "Microondas",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 3,
+    "fields": {
+      "descripcion": "Cocinas",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 4,
+    "fields": {
+      "descripcion": "Batidoras y Licuadoras",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 5,
+    "fields": {
+      "descripcion": "Freidoras",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 6,
+    "fields": {
+      "descripcion": "Lavadoras",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 7,
+    "fields": {
+      "descripcion": "Secadoras",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 8,
+    "fields": {
+      "descripcion": "Planchas",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 9,
+    "fields": {
+      "descripcion": "Centros de planchado",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 10,
+    "fields": {
+      "descripcion": "Aspiradoras",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 11,
+    "fields": {
+      "descripcion": "Purificadores de aire",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 12,
+    "fields": {
+      "descripcion": "Ventiladores",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 13,
+    "fields": {
+      "descripcion": "Calefacción",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 14,
+    "fields": {
+      "descripcion": "Televisores",
+      "categoria": 5
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 15,
+    "fields": {
+      "descripcion": "Sistemas de sonido",
+      "categoria": 5
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 16,
+    "fields": {
+      "descripcion": "Consolas de videojuegos",
+      "categoria": 5
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 17,
+    "fields": {
+      "descripcion": "Aires acondicionados",
+      "categoria": 6
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 18,
+    "fields": {
+      "descripcion": "Calefacción",
+      "categoria": 6
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 19,
+    "fields": {
+      "descripcion": "Deshumidificadores",
+      "categoria": 6
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 20,
+    "fields": {
+      "descripcion": "Secadores de pelo",
+      "categoria": 7
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 21,
+    "fields": {
+      "descripcion": "Cepillos de dientes eléctricos",
+      "categoria": 7
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 22,
+    "fields": {
+      "descripcion": "Máquinas de afeitar",
+      "categoria": 7
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 23,
+    "fields": {
+      "descripcion": "Cafeteras",
+      "categoria": 8
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 24,
+    "fields": {
+      "descripcion": "Teteras eléctricas",
+      "categoria": 8
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 25,
+    "fields": {
+      "descripcion": "Exprimidores",
+      "categoria": 8
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 26,
+    "fields": {
+      "descripcion": "Dispositivos inteligentes",
+      "categoria": 9
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 27,
+    "fields": {
+      "descripcion": "Hornos y frigoríficos inteligentes",
+      "categoria": 9
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 28,
+    "fields": {
+      "descripcion": "Asistentes virtuales",
+      "categoria": 9
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 29,
+    "fields": {
+      "descripcion": "Máquinas para hacer pan",
+      "categoria": 10
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 30,
+    "fields": {
+      "descripcion": "Cocinas portátiles",
+      "categoria": 10
+    }
+  },
+  {
+    "model": "tienda.subcategoria",
+    "pk": 31,
+    "fields": {
+      "descripcion": "Máquinas de helados",
+      "categoria": 10
+    }
+  }
+]

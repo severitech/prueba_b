@@ -1,0 +1,384 @@
+[
+  {
+    "model": "tienda.productos",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Televisor LG 55\" 4K",
+      "precio": 1200.0,
+      "stock": 50,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/312540-1200-auto?v=638830373056570000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/312543-1200-auto?v=638830373056570000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/312545-1200-auto?v=638830373056700000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 14
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 2,
+    "fields": {
+      "descripcion": "Microondas Panasonic",
+      "precio": 250.0,
+      "stock": 30,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/328993-1200-auto?v=638873608837900000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/328994-1200-auto?v=638873608838200000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/328995-1200-auto?v=638873608838200000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/328996-1200-auto?v=638873608838370000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 2
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 3,
+    "fields": {
+      "descripcion": "Licuadora Oster",
+      "precio": 80.0,
+      "stock": 20,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/331517-1200-auto?v=638882050766700000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/331518-1200-auto?v=638882050767000000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 4
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 4,
+    "fields": {
+      "descripcion": "Lavadora Samsung 12kg",
+      "precio": 800.0,
+      "stock": 15,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/249377-1200-auto?v=637807341814930000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249350-1200-auto?v=637807341714800000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249351-1200-auto?v=637807341717000000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249353-1200-auto?v=637807341720600000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 6
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 5,
+    "fields": {
+      "descripcion": "Microondas Digital 30L",
+      "precio": 180.0,
+      "stock": 20,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/226214-1200-auto?v=637405554543700000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/226181-1200-auto?v=637405554269700000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/226183-1200-auto?v=637405554275300000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/226182-1200-auto?v=637405554272400000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 2
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 6,
+    "fields": {
+      "descripcion": "Microondas Grill Incorporado",
+      "precio": 250.0,
+      "stock": 15,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/276325-1200-auto?v=638246901789500000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/276304-1200-auto?v=638246901724100000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/276305-1200-auto?v=638246901727230000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/276306-1200-auto?v=638246901730330000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 2
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 7,
+    "fields": {
+      "descripcion": "Microondas Empotrable",
+      "precio": 320.0,
+      "stock": 10,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/287098-1200-auto?v=638382549709830000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/287079-1200-auto?v=638382549625330000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/287080-1200-auto?v=638382549641600000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 2
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 8,
+    "fields": {
+      "descripcion": "Microondas Compacto 20L",
+      "precio": 120.0,
+      "stock": 30,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/234511-1200-auto?v=637564459147130000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/234394-1200-auto?v=637564458559970000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/234395-1200-auto?v=637564458562200000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/234396-1200-auto?v=637564458563800000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 2
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 9,
+    "fields": {
+      "descripcion": "Cocina a Gas 4 Quemadores",
+      "precio": 380.0,
+      "stock": 12,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/313290-1200-auto?v=638833469218700000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/313291-1200-auto?v=638833469218700000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/313292-1200-auto?v=638833469218870000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 3
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 10,
+    "fields": {
+      "descripcion": "Cocina Eléctrica Vitrocerámica",
+      "precio": 420.0,
+      "stock": 8,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/249410-1200-auto?v=637807881707300000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249388-1200-auto?v=637807881652630000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249389-1200-auto?v=637807881656070000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249390-1200-auto?v=637807881657800000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 3
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 11,
+    "fields": {
+      "descripcion": "Cocina Mixta Gas-Electricidad",
+      "precio": 550.0,
+      "stock": 6,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/238049-1200-auto?v=637630101212430000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 3
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 12,
+    "fields": {
+      "descripcion": "Cocina Industrial 6 Quemadores",
+      "precio": 890.0,
+      "stock": 4,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/313293-1200-auto?v=638864583207000000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/313294-1200-auto?v=638864583207300000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 3
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 13,
+    "fields": {
+      "descripcion": "Licuadora Profesional 2L",
+      "precio": 95.0,
+      "stock": 25,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/311931-1200-auto?v=638830287478400000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/311932-1200-auto?v=638830287478800000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/311933-1200-auto?v=638830287478800000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 4
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 14,
+    "fields": {
+      "descripcion": "Batidora de Mano 5 Velocidades",
+      "precio": 65.0,
+      "stock": 30,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/180017-1200-auto?v=636463524122230000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/180018-1200-auto?v=636463524129230000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/180019-1200-auto?v=636463524153370000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 4
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 15,
+    "fields": {
+      "descripcion": "Batidora de Pie 4.5L",
+      "precio": 120.0,
+      "stock": 18,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/330200-1200-auto?v=638875273664370000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/330201-1200-auto?v=638875273664500000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/330202-1200-auto?v=638875273664500000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 4
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 16,
+    "fields": {
+      "descripcion": "Licuadora Extractora Lenta",
+      "precio": 150.0,
+      "stock": 15,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/267277-1200-auto?v=638132961713270000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/267268-1200-auto?v=638132961671030000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 4
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 17,
+    "fields": {
+      "descripcion": "Freidora de Aire 5L Digital",
+      "precio": 130.0,
+      "stock": 22,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/265839-1200-auto?v=638107905643330000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/265832-1200-auto?v=638107905628370000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/265833-1200-auto?v=638107905631170000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 5
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 18,
+    "fields": {
+      "descripcion": "Freidora Profesional 10L",
+      "precio": 280.0,
+      "stock": 10,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/278236-1200-auto?v=638261805812100000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/278204-1200-auto?v=638261805718770000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/278205-1200-auto?v=638261805721100000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 5
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 19,
+    "fields": {
+      "descripcion": "Freidora Sin Aceite 4.2L",
+      "precio": 110.0,
+      "stock": 28,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/249083-1200-auto?v=637804749807070000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249051-1200-auto?v=637804749745400000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249052-1200-auto?v=637804749747470000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 5
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 20,
+    "fields": {
+      "descripcion": "Freidora Doble Canasta",
+      "precio": 350.0,
+      "stock": 8,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/249051-1200-auto?v=637804749745400000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/249052-1200-auto?v=637804749747470000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 5
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 21,
+    "fields": {
+      "descripcion": "Lavadora Carga Frontal 8kg",
+      "precio": 420.0,
+      "stock": 14,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/268845-1200-auto?v=638146677817770000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/268831-1200-auto?v=638146677786000000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/268832-1200-auto?v=638146677788470000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 6
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 22,
+    "fields": {
+      "descripcion": "Lavadora Carga Superior 12kg",
+      "precio": 380.0,
+      "stock": 16,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/290636-1200-auto?v=638531156058830000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/290632-1200-auto?v=638531156043170000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 6
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 23,
+    "fields": {
+      "descripcion": "Lavadora Secadora 10kg",
+      "precio": 680.0,
+      "stock": 9,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/227712-1200-auto?v=637424526393730000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/227665-1200-auto?v=637424520286070000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 6
+    }
+  },
+  {
+    "model": "tienda.productos",
+    "pk": 24,
+    "fields": {
+      "descripcion": "Lavadora Inteligente Wi-Fi",
+      "precio": 750.0,
+      "stock": 7,
+      "estado": "Activo",
+      "imagenes": [
+        "https://multicenter.vtexassets.com/arquivos/ids/337092-1200-auto?v=638890482811370000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/337090-1200-auto?v=638890482802070000&width=1200&height=auto&aspect=true",
+        "https://multicenter.vtexassets.com/arquivos/ids/337091-1200-auto?v=638890482805470000&width=1200&height=auto&aspect=true"
+      ],
+      "subcategoria": 6
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "model": "tienda.productopromocion",
+    "pk": 1,
+    "fields": {
+      "fecha": "2024-01-15T08:00:00Z",
+      "producto": 1,
+      "promocion": 1
+    }
+  },
+  {
+    "model": "tienda.productopromocion", 
+    "pk": 2,
+    "fields": {
+      "fecha": "2024-01-15T08:00:00Z",
+      "producto": 2,
+      "promocion": 1
+    }
+  },
+  {
+    "model": "tienda.productopromocion",
+    "pk": 3,
+    "fields": {
+      "fecha": "2024-01-16T10:30:00Z",
+      "producto": 5,
+      "promocion": 2
+    }
+  },
+  {
+    "model": "tienda.productopromocion",
+    "pk": 4,
+    "fields": {
+      "fecha": "2024-01-17T14:20:00Z", 
+      "producto": 8,
+      "promocion": 2
+    }
+  },
+  {
+    "model": "tienda.productopromocion",
+    "pk": 5,
+    "fields": {
+      "fecha": "2024-01-18T11:15:00Z",
+      "producto": 12,
+      "promocion": 1
+    }
+  }
+]

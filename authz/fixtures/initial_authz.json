@@ -1,0 +1,66 @@
+[
+  {
+    "model": "authz.rol",
+    "pk": 1,
+    "fields": { "rol": "Administrador" }
+  },
+  {
+    "model": "authz.rol",
+    "pk": 2,
+    "fields": { "rol": "Cliente" }
+  },
+
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$OvTnL2Yf9TTXp0XL6uqlQo$a14rcru1YYPta0NZZdJxTL9HcPZgup6uoeiCYmeI24A=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "juan.perez@example.com",
+      "first_name": "Juan",
+      "last_name": "Pérez",
+      "email": "juan.perez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-10-22T00:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$Jc91T0CT353cVYBaRBYeUf$QTwVHB6Mx49n2hxEEQo2wdzVUVISxIoZL5Il9o5XPEE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ana.gomez@example.com",
+      "first_name": "Ana",
+      "last_name": "Gómez",
+      "email": "ana.gomez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-10-22T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "authz.usuario",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "rol": 1,
+      "telefono": "555-1234",
+      "estado": true
+    }
+  },
+  {
+    "model": "authz.usuario",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "rol": 2,
+      "telefono": "555-5678",
+      "estado": true
+    }
+  }
+]

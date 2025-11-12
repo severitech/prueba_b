@@ -1,0 +1,25 @@
+{
+  "scope": "cliente",
+  "fecha_entrenamiento": "2025-11-10 23:27:50 UTC",
+  "features": [
+    "mes_sin",
+    "mes_cos",
+    "tendencia",
+    "tendencia_cuad",
+    "lag_1",
+    "lag_12",
+    "media_3m"
+  ],
+  "muestras_totales": 21608,
+  "series_total": 500,
+  "series_evaluadas": 50,
+  "metricas_promedio": {
+    "r2_mean": 0.01217937317710844,
+    "mae_mean": 2.061097222222222,
+    "precision_mean": 48.61198698554401
+  },
+  "archivos_auxiliares": {
+    "metrics_csv": "C:\\Users\\pc\\Desktop\\EXAMEN2\\backend-smartsales360\\scikit_learn_ia\\datasets\\panel_cliente_metrics.csv",
+    "series_summary_csv": "C:\\Users\\pc\\Desktop\\EXAMEN2\\backend-smartsales360\\scikit_learn_ia\\datasets\\panel_cliente_series_summary.csv"
+  }
+}

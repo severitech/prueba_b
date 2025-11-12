@@ -1,0 +1,84 @@
+{
+<<<<<<< HEAD
+  "fecha_entrenamiento": "2025-11-09 11:35:16",
+=======
+  "fecha_entrenamiento": "2025-11-11 00:29:23 UTC",
+>>>>>>> ada091cd74cd321ba7b8c66cdab9d2e86267d96f
+  "metricas": {
+    "r2": 0.9704114315497663,
+    "mae": 83.37745932539688,
+    "precision": 92.90957755010444,
+    "error_porcentual": 7.09042244989556
+  },
+  "caracteristicas": [
+    "mes_sin",
+    "mes_cos",
+    "tendencia",
+    "tendencia_cuad",
+    "navidad",
+    "verano",
+    "inicio_anio",
+    "lag_1",
+    "lag_12",
+    "media_3m"
+  ],
+  "configuracion": {
+    "muestras": 72,
+    "rango_fechas": "2019-01 a 2024-12",
+    "cantidad_promedio": 948.3194444444445,
+    "cantidad_min": 422.0,
+    "cantidad_max": 2343.0,
+    "desviacion_estandar": 527.128196888211,
+    "patrones_estacionales": {
+      "1": {
+        "promedio": 448,
+        "desviacion": 23
+      },
+      "2": {
+        "promedio": 446,
+        "desviacion": 6
+      },
+      "3": {
+        "promedio": 627,
+        "desviacion": 134
+      },
+      "4": {
+        "promedio": 624,
+        "desviacion": 112
+      },
+      "5": {
+        "promedio": 635,
+        "desviacion": 117
+      },
+      "6": {
+        "promedio": 1212,
+        "desviacion": 237
+      },
+      "7": {
+        "promedio": 1238,
+        "desviacion": 236
+      },
+      "8": {
+        "promedio": 642,
+        "desviacion": 135
+      },
+      "9": {
+        "promedio": 1098,
+        "desviacion": 222
+      },
+      "10": {
+        "promedio": 659,
+        "desviacion": 135
+      },
+      "11": {
+        "promedio": 1867,
+        "desviacion": 341
+      },
+      "12": {
+        "promedio": 1885,
+        "desviacion": 356
+      }
+    }
+  },
+  "version": "8.0_funcional"
+}
