@@ -28,4 +28,6 @@ urlpatterns = [
     
     # Reportes
     path('api/', include('reportes.urls')),
+
+    path('api/ia/', include('scikit_learn_ia.urls')),
 ]

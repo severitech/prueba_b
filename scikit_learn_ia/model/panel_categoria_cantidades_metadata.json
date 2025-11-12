@@ -1,6 +1,6 @@
 {
   "scope": "categoria",
-  "fecha_entrenamiento": "2025-11-10 23:27:47 UTC",
+  "fecha_entrenamiento": "2025-11-12 16:53:36 UTC",
   "features": [
     "mes_sin",
     "mes_cos",
@@ -19,7 +19,7 @@
     "precision_mean": 87.55872761764532
   },
   "archivos_auxiliares": {
-    "metrics_csv": "C:\\Users\\pc\\Desktop\\EXAMEN2\\backend-smartsales360\\scikit_learn_ia\\datasets\\panel_categoria_metrics.csv",
-    "series_summary_csv": "C:\\Users\\pc\\Desktop\\EXAMEN2\\backend-smartsales360\\scikit_learn_ia\\datasets\\panel_categoria_series_summary.csv"
+    "metrics_csv": "C:\\Users\\pc\\Desktop\\examenFINAL\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_metrics.csv",
+    "series_summary_csv": "C:\\Users\\pc\\Desktop\\examenFINAL\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_series_summary.csv"
   }
 }

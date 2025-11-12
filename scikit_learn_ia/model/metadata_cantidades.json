@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "fecha_entrenamiento": "2025-11-09 11:35:16",
-=======
-  "fecha_entrenamiento": "2025-11-11 00:29:23 UTC",
->>>>>>> ada091cd74cd321ba7b8c66cdab9d2e86267d96f
+  "fecha_entrenamiento": "2025-11-12 16:53:19 UTC",
   "metricas": {
     "r2": 0.9704114315497663,
     "mae": 83.37745932539688,

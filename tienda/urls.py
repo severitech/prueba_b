@@ -38,4 +38,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path('mis-ventas/', views.MisVentasList.as_view(), name='mis-ventas'),
     path('api/', include('reportes.urls')),
+    path('api/ia/', include('scikit_learn_ia.urls')),
 ]

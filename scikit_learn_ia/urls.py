@@ -10,7 +10,11 @@ from .views import (
     ReportePDFView,
     ReporteExcelView,
     PanelSeriesListView,
-    PanelPrediccionesView
+    PanelPrediccionesView,
+    EntrenarPanelView,
+    PanelHealthView,
+    PanelDescargarReporteView,
+    VentasHistoricasView
 )
 
 urlpatterns = [
@@ -24,5 +28,11 @@ urlpatterns = [
     path('reporte-excel/', ReporteExcelView.as_view(), name='ia-reporte-excel'),
     path("panel/series/", PanelSeriesListView.as_view(), name="ia-panel-series"),
     path("panel/predicciones/", PanelPrediccionesView.as_view(), name="ia-panel-predicciones"),
+    path("panel/entrenar/", EntrenarPanelView.as_view(), name="ia-panel-entrenar"),
+    path("panel/health/", PanelHealthView.as_view(), name="ia-panel-health"),
+    path("panel/descargar/", PanelDescargarReporteView.as_view(), name="ia-panel-descargar"),
+     path("ventas-historicas/", VentasHistoricasView.as_view(), name="ia-ventas-historicas"),
 ]
+
+
 
