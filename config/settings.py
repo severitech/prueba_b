@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     "authz",
     "rest_framework",
     "rest_framework.authtoken",
-    "scikit_learn_ia",
+    "scikit_learn_ia.apps.ScikitLearnIaConfig",
     "tienda",
     "reportes",
     "core",

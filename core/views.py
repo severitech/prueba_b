@@ -9,13 +9,16 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import os
 from dotenv import load_dotenv
-from rest_framework import status
+from rest_framework import status, viewsets, permissions
 from django.db import transaction
 from tienda.models import Pago, Venta, Productos, DetalleVenta
 from authz.models import Usuario
-from rest_framework.decorators import api_view, authentication_classes, permission_classes
+from rest_framework.decorators import api_view, authentication_classes, permission_classes, action
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+
+from .models import Notificacion
+from .serializers import NotificacionSerializer, UsuarioSimpleSerializer
 
 load_dotenv()
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -690,3 +693,94 @@ def pago_cancelado_mobile(request):
 
         cancel_link = f"turismoapp://payment-cancel?status=cancelled"
         return redirect_to_deep_link(cancel_link)
+
+
+class NotificacionViewSet(viewsets.ModelViewSet):
+    queryset = Notificacion.objects.select_related("creado_por").prefetch_related("destinatarios")
+    serializer_class = NotificacionSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        estado = self.request.query_params.get("estado")
+        if estado:
+            queryset = queryset.filter(estado=estado)
+        usuario_id = self.request.query_params.get("usuario")
+        if usuario_id:
+            queryset = queryset.filter(destinatarios__id=usuario_id)
+        return queryset.distinct()
+
+    def _should_send(self, request) -> bool:
+        valor = request.data.get("enviar_ahora") if hasattr(request, "data") else None
+        if valor is None:
+            valor = request.query_params.get("enviar_ahora")
+        if isinstance(valor, bool):
+            return valor
+        if valor is None:
+            return False
+        return str(valor).lower() in {"1", "true", "yes", "si"}
+
+    def _datos_extra(self, request):
+        datos = request.data.get("datos_extra") if hasattr(request, "data") else None
+        return datos if isinstance(datos, dict) else None
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        notificacion = serializer.save(
+            creado_por=request.user if request.user.is_authenticated else None
+        )
+        resultado = None
+        if self._should_send(request) and notificacion.puede_enviarse():
+            resultado = notificacion.enviar(datos_extra=self._datos_extra(request))
+
+        response_serializer = self.get_serializer(notificacion)
+        data = response_serializer.data
+        if resultado is not None:
+            data["ultimo_resultado"] = resultado
+        headers = self.get_success_headers(data)
+        return Response(data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop("partial", False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        notificacion = serializer.save()
+
+        resultado = None
+        if self._should_send(request) and notificacion.puede_enviarse():
+            resultado = notificacion.enviar(datos_extra=self._datos_extra(request))
+
+        response_serializer = self.get_serializer(notificacion)
+        data = response_serializer.data
+        if resultado is not None:
+            data["ultimo_resultado"] = resultado
+        return Response(data)
+
+    @action(detail=True, methods=["post"], url_path="enviar")
+    def enviar(self, request, pk=None):
+        notificacion = self.get_object()
+        if not notificacion.puede_enviarse():
+            return Response(
+                {"detail": "La notificación ya fue enviada o no tiene destinatarios."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        resultado = notificacion.enviar(datos_extra=self._datos_extra(request))
+        serializer = self.get_serializer(notificacion)
+        data = serializer.data
+        data["ultimo_resultado"] = resultado
+        return Response(data)
+
+    @action(detail=False, methods=["get"], url_path="destinatarios")
+    def listar_destinatarios(self, request):
+        usuarios = Usuario.objects.filter(estado=True).select_related("user", "rol").order_by(
+            "user__first_name", "user__last_name"
+        )
+        page = self.paginate_queryset(usuarios)
+        if page is not None:
+            serializer = UsuarioSimpleSerializer(page, many=True, context={"request": request})
+            return self.get_paginated_response(serializer.data)
+        serializer = UsuarioSimpleSerializer(usuarios, many=True, context={"request": request})
+        return Response(serializer.data)
