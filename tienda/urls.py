@@ -19,6 +19,7 @@ from .api import (
     MantenimientoViewSet,
     FCMDeviceRegisterView,
     FCMDeviceListView,
+    FCMDeviceUnregisterView,
     SendNotificationView,
 )
 
