@@ -61,6 +61,8 @@ staticfiles/
 config.json
 credentials.json
 secrets.json
+# Firebase service account keys (no subir credenciales)
+*firebase-adminsdk*.json
 
 # ======================================
 # �️ ENTORNO DE DESARROLLO

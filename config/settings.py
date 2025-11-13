@@ -24,6 +24,15 @@ STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY', '')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Detectar credenciales de Firebase en desarrollo: si existe un archivo de cuenta de servicio
+# en la raíz del proyecto y no se ha configurado la variable de entorno, la usamos automáticamente.
+if not os.getenv('RUTA_CUENTA_SERVICIO_FIREBASE') and not os.getenv('FIREBASE_SERVICE_ACCOUNT'):
+    # Buscar cualquier archivo de cuenta de servicio con patrón *firebase-adminsdk*.json
+    candidates = list(BASE_DIR.glob('*firebase-adminsdk*.json'))
+    if candidates:
+        # usar el primero que encontremos
+        os.environ['RUTA_CUENTA_SERVICIO_FIREBASE'] = str(candidates[0])
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/

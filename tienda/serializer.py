@@ -14,6 +14,7 @@ from tienda.models import (
     Pago,
     Mantenimiento,
     Prediccion,
+    FCMDevice,
 )
 
 from authz.models import Usuario, Rol
@@ -176,3 +177,19 @@ class PrediccionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prediccion
         fields = "__all__"
+
+
+class FCMDeviceSerializer(serializers.ModelSerializer):
+    usuario = UsuarioSerializer(read_only=True)
+    class Meta:
+        model = FCMDevice
+        fields = [
+            'id',
+            'usuario',
+            'registration_id',
+            'tipo_dispositivo',
+            'activo',
+            'fecha_creacion',
+            'fecha_modificacion',
+        ]
+        read_only_fields = ['id', 'usuario', 'fecha_creacion', 'fecha_modificacion']

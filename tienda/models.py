@@ -1,6 +1,29 @@
 from django.db import models
 from authz.models import Usuario
 
+
+# Modelo para guardar tokens FCM de dispositivos móviles
+class FCMDevice(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='fcm_devices', null=True, blank=True)
+    registration_id = models.CharField(max_length=255, unique=True)
+    TIPO_CHOICES = [
+        ('android', 'Android'),
+        ('ios', 'iOS'),
+        ('web', 'Web'),
+    ]
+    tipo_dispositivo = models.CharField(max_length=20, choices=TIPO_CHOICES, default='android')
+    activo = models.BooleanField(default=True)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_modificacion = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'FCM Device'
+        verbose_name_plural = 'FCM Devices'
+
+    def __str__(self):
+        usuario_str = self.usuario.user.username if self.usuario and hasattr(self.usuario, 'user') else 'anon'
+        return f"{self.registration_id} ({usuario_str})"
+
 # =======================================
 # TABLAS DE CLASIFICACIÓN: CATEGORÍA Y SUBCATEGORÍA
 # =======================================

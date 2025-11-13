@@ -17,6 +17,9 @@ from .api import (
     ProductoPromocionViewSet,
     PagoViewSet,
     MantenimientoViewSet,
+    FCMDeviceRegisterView,
+    FCMDeviceListView,
+    SendNotificationView,
 )
 
 
@@ -39,4 +42,8 @@ urlpatterns = [
     path('mis-ventas/', views.MisVentasList.as_view(), name='mis-ventas'),
     path('api/', include('reportes.urls')),
     path('api/ia/', include('scikit_learn_ia.urls')),
+    # FCM / Push endpoints
+    path('devices/register/', FCMDeviceRegisterView.as_view(), name='device-register'),
+    path('admin/devices/', FCMDeviceListView.as_view(), name='admin-devices'),
+    path('admin/send-notification/', SendNotificationView.as_view(), name='admin-send-notification'),
 ]
