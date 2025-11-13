@@ -8,9 +8,16 @@ from datetime import datetime
 from pathlib import Path
 
 # Rutas base (ajustadas a tu estructura actual)
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATASET_PATH = BASE_DIR / "datasets" / "predicciones_cantidades_mensuales.csv"
-OUTPUT_PATH = BASE_DIR / "datasets" / "reporte_predicciones.pdf"
+# BASE_DIR = Path(__file__).resolve().parent.parent
+# DATASET_PATH = BASE_DIR / "datasets" / "predicciones_cantidades_mensuales.csv"
+# OUTPUT_PATH = BASE_DIR / "datasets" / "reporte_predicciones.pdf"
+# 👉 Importamos la ruta correcta desde paths.py
+from scikit_learn_ia.paths import DATA_DIR
+
+DATASET_PATH = DATA_DIR / "predicciones_cantidades_mensuales.csv"
+OUTPUT_PATH  = DATA_DIR / "reporte_predicciones.pdf"
+
+
 def crear_reporte_pdf(desde_csv: bool = True, predicciones=None):
     """
     Genera un reporte PDF con las predicciones de demanda (productos/mes).
