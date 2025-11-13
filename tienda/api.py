@@ -45,25 +45,36 @@ class SubCategoriaViewSet(viewsets.ModelViewSet):
     serializer_class = SubCategoriaSerializer
     permission_classes = [permissions.AllowAny]
 
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['categoria']
+
 class ProductoViewSet(viewsets.ModelViewSet):
     queryset = Productos.objects.all()
     serializer_class = ProductoSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['subcategoria', 'estado']
 
 class VentaViewSet(viewsets.ModelViewSet):
     queryset = Venta.objects.all()
     serializer_class = VentaSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['cliente']
 
 class DetalleVentaViewSet(viewsets.ModelViewSet):
     queryset = DetalleVenta.objects.all()
     serializer_class = DetalleVentaSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['venta', 'producto', 'usuario']
 
 class GarantiaViewSet(viewsets.ModelViewSet):
     queryset = Garantia.objects.all()
     serializer_class = GarantiaSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['producto', 'detalle_venta']
 
 class IngresoViewSet(viewsets.ModelViewSet):
     queryset = Ingreso.objects.all()
@@ -79,6 +90,8 @@ class PromocionViewSet(viewsets.ModelViewSet):
     queryset = Promocion.objects.all()
     serializer_class = PromocionSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['activo']
 
 class ProductoPromocionViewSet(viewsets.ModelViewSet):
     queryset = ProductoPromocion.objects.all()
