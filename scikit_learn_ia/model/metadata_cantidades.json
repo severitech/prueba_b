@@ -1,10 +1,10 @@
 {
-  "fecha_entrenamiento": "2025-11-12 16:53:19 UTC",
+  "fecha_entrenamiento": "2025-11-12 21:22:24 UTC",
   "metricas": {
-    "r2": 0.9704114315497663,
-    "mae": 83.37745932539688,
+    "r2": 0.9704114315497664,
+    "mae": 83.37745932539683,
     "precision": 92.90957755010444,
-    "error_porcentual": 7.09042244989556
+    "error_porcentual": 7.090422449895556
   },
   "caracteristicas": [
     "mes_sin",

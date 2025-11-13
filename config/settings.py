@@ -163,12 +163,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 def get_openai_key():
     """
     Obtiene la API Key de OpenAI para la cuenta gratuita.
-    Prioridad: 1. Variable entorno → 2. Key de desarrollo
+    Prioridad: 1. Variable entorno → 2. Key de desarrollo (opcional).
     """
     # 1. Variable de entorno (producción)
     key = os.getenv("OPENAI_API_KEY")
 
+    # Si quieres, puedes poner aquí una key de desarrollo por defecto:
+    # if not key:
+    #     key = "sk-xxxxx_TU_KEY_DE_DESARROLLO"
 
+    return key  
 
 
 OPENAI_API_KEY = get_openai_key()
+
