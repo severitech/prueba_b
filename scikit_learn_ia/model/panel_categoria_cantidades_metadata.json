@@ -1,6 +1,6 @@
 {
   "scope": "categoria",
-  "fecha_entrenamiento": "2025-11-12 21:22:33 UTC",
+  "fecha_entrenamiento": "2025-11-13 03:00:42 UTC",
   "features": [
     "mes_sin",
     "mes_cos",
@@ -14,12 +14,12 @@
   "series_total": 6,
   "series_evaluadas": 6,
   "metricas_promedio": {
-    "r2_mean": 0.9222667896738427,
-    "mae_mean": 22.37307668283363,
-    "precision_mean": 87.55872761764532
+    "r2_mean": 0.9226823906641209,
+    "mae_mean": 22.26782976925338,
+    "precision_mean": 87.61232267422554
   },
   "archivos_auxiliares": {
-    "metrics_csv": "C:\\Users\\pc\\Desktop\\examenFINAL\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_metrics.csv",
-    "series_summary_csv": "C:\\Users\\pc\\Desktop\\examenFINAL\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_series_summary.csv"
+    "metrics_csv": "D:\\Sis2\\Doly\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_metrics.csv",
+    "series_summary_csv": "D:\\Sis2\\Doly\\prueba_b\\scikit_learn_ia\\datasets\\panel_categoria_series_summary.csv"
   }
 }

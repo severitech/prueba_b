@@ -6,6 +6,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework import status
 from .models import Rol, Usuario
 from django.contrib.auth import authenticate
+from tienda.models import FCMDevice
 # Create your views here.
 
 
@@ -66,6 +67,19 @@ def login(request):
                 "last_name": user.last_name,
                 "perfil": perfil_serializer.data
             }
+        # Si el cliente envió un registration_id (token FCM) durante el login,
+        # registrarlo/actualizarlo y asociarlo al perfil creado/obtenido.
+        reg = request.data.get('registration_id') or request.data.get('registrationId') or request.data.get('token')
+        if reg:
+            tipo_disp = request.data.get('tipo_dispositivo') or request.data.get('tipo') or 'android'
+            try:
+                FCMDevice.objects.update_or_create(
+                    registration_id=reg,
+                    defaults={'usuario': perfil, 'tipo_dispositivo': tipo_disp, 'activo': True}
+                )
+            except Exception:
+                # No bloquear el login por fallos al registrar el token; se puede loggear si se desea
+                pass
         
         return Response({
             'token': token.key,

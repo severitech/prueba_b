@@ -140,6 +140,43 @@ class FCMDeviceListView(APIView):
         return Response(serializer.data)
 
 
+class FCMDeviceUnregisterView(APIView):
+    """Desactiva un token FCM (logout).
+
+    Request JSON: { "registration_id": "<FCM_TOKEN>" }
+    Reglas:
+    - Si el token pertenece al `Usuario` autenticado se marca `activo=False`.
+    - Si el usuario es admin/staff puede desactivar cualquier token.
+    """
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        reg = request.data.get('registration_id') or request.data.get('registrationId') or request.data.get('token')
+        if not reg:
+            return Response({'detail': 'registration_id requerido'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Intentar obtener perfil Usuario
+        usuario = None
+        try:
+            usuario = UsuarioModel.objects.get(user=request.user)
+        except Exception:
+            usuario = None
+
+        qs = FCMDevice.objects.filter(registration_id=reg)
+        if usuario:
+            qs = qs.filter(usuario=usuario)
+        else:
+            # Si no hay perfil y no es staff, negar
+            if not request.user.is_staff:
+                return Response({'detail': 'No permitido'}, status=status.HTTP_403_FORBIDDEN)
+
+        updated = qs.update(activo=False)
+        if updated == 0:
+            return Response({'detail': 'No se encontró el token para desactivar'}, status=status.HTTP_404_NOT_FOUND)
+
+        return Response({'detail': f'{updated} dispositivo(s) desactivado(s)'} , status=status.HTTP_200_OK)
+
+
 class SendNotificationView(APIView):
     permission_classes = [IsAdminUser]
 

@@ -1,0 +1,31 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>Enviar notificación personalizada</h1>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="ids" value="{{ ids }}" />
+    <div>
+      <label for="id_title">Título</label><br />
+      <input type="text" name="title" id="id_title" style="width:60%" />
+    </div>
+    <div style="margin-top:8px">
+      <label for="id_body">Cuerpo</label><br />
+      <textarea name="body" id="id_body" rows="4" style="width:60%"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <button type="submit" class="default">Enviar</button>
+      <a href="../">Cancelar</a>
+    </div>
+  </form>
+
+  <h2>Dispositivos seleccionados</h2>
+  <ul>
+    {% for d in devices %}
+      <li>{{ d.id }} — {{ d.registration_id }} — {{ d.usuario.user.email if d.usuario }} — {{ d.tipo_dispositivo }} — activo: {{ d.activo }}</li>
+    {% empty %}
+      <li>No hay dispositivos seleccionados</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

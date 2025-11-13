@@ -44,6 +44,7 @@ urlpatterns = [
     path('api/ia/', include('scikit_learn_ia.urls')),
     # FCM / Push endpoints
     path('devices/register/', FCMDeviceRegisterView.as_view(), name='device-register'),
+    path('devices/unregister/', FCMDeviceUnregisterView.as_view(), name='device-unregister'),
     path('admin/devices/', FCMDeviceListView.as_view(), name='admin-devices'),
     path('admin/send-notification/', SendNotificationView.as_view(), name='admin-send-notification'),
 ]
