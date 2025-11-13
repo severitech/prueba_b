@@ -346,84 +346,45 @@ class ReporteVozAudioView(View):
                 'error': f'Error al procesar audio: {str(e)}'
             }, status=500)
     
-    # def convertir_audio_a_texto(self, audio_file):
-    #     """
-    #     Convierte archivo de audio a texto usando speech_recognition.
-    #     """
-    #     try:
-    #         import speech_recognition as sr
-    #         import tempfile
-    #         import os
-            
-    #         # Crear archivo temporal
-    #         with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as temp_audio:
-    #             # Guardar el archivo subido en temporal
-    #             for chunk in audio_file.chunks():
-    #                 temp_audio.write(chunk)
-    #             temp_audio_path = temp_audio.name
-            
-    #         # Usar speech_recognition para transcribir
-    #         recognizer = sr.Recognizer()
-            
-    #         with sr.AudioFile(temp_audio_path) as source:
-    #             audio_data = recognizer.record(source)
-    #             texto = recognizer.recognize_google(audio_data, language='es-ES')
-            
-    #         # Limpiar archivo temporal
-    #         os.unlink(temp_audio_path)
-            
-    #         return texto
-            
-    #     except Exception as e:
-    #         print(f"Error en transcripción: {e}")
-    #         return None
+    def convertir_audio_a_texto(self, audio_file):
+        """Convierte audio a texto usando speech_recognition y pydub."""
+        import speech_recognition as sr
+        import tempfile
+        import os
+        from pydub import AudioSegment
 
-def convertir_audio_a_texto(self, audio_file):
-    """
-    Convierte archivo de audio a texto usando speech_recognition + pydub.
-    Acepta webm/mp3/ogg/wav y lo convierte internamente a WAV.
-    """
-    import speech_recognition as sr
-    import tempfile
-    import os
-    from pydub import AudioSegment
+        temp_input = None
+        temp_wav = None
 
-    temp_input = None
-    temp_wav = None
+        try:
+            ext = os.path.splitext(audio_file.name)[1].lower() or ".webm"
+            with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp_in:
+                for chunk in audio_file.chunks():
+                    tmp_in.write(chunk)
+                temp_input = tmp_in.name
 
-    try:
-        # 1) Guardar el archivo subido con su extensión original
-        ext = os.path.splitext(audio_file.name)[1].lower() or ".webm"
-        with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp_in:
-            for chunk in audio_file.chunks():
-                tmp_in.write(chunk)
-            temp_input = tmp_in.name
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_wav:
+                temp_wav = tmp_wav.name
 
-        # 2) Convertir a WAV con pydub (requiere ffmpeg instalado)
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_wav:
-            temp_wav = tmp_wav.name
+            audio_seg = AudioSegment.from_file(temp_input)
+            audio_seg.export(temp_wav, format="wav")
 
-        audio_seg = AudioSegment.from_file(temp_input)  # pydub detecta el formato
-        audio_seg.export(temp_wav, format="wav")
+            recognizer = sr.Recognizer()
+            with sr.AudioFile(temp_wav) as source:
+                audio_data = recognizer.record(source)
+                texto = recognizer.recognize_google(audio_data, language='es-ES')
 
-        # 3) Usar speech_recognition sobre el WAV convertido
-        recognizer = sr.Recognizer()
-        with sr.AudioFile(temp_wav) as source:
-            audio_data = recognizer.record(source)
-            texto = recognizer.recognize_google(audio_data, language='es-ES')
+            return texto
 
-        return texto
+        except Exception as e:
+            print(f"Error en transcripción: {e}")
+            return None
 
-    except Exception as e:
-        print(f"Error en transcripción: {e}")
-        return None
-
-    finally:
-        # 4) Borrar temporales
-        if temp_input and os.path.exists(temp_input):
-            os.unlink(temp_input)
-        if temp_wav and os.path.exists(temp_wav):
-            os.unlink(temp_wav)
+        finally:
+            if temp_input and os.path.exists(temp_input):
+                os.unlink(temp_input)
+            if temp_wav and os.path.exists(temp_wav):
+                os.unlink(temp_wav)
 
 
 # Vista de prueba para verificar que la app funciona
