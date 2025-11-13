@@ -43,7 +43,11 @@ SECRET_KEY = "django-insecure-&szk-&gf1jadg$**)wcymel-ee=c@ktl6s4_)8r3lmo0f63_ac
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+raw_allowed_hosts = os.getenv(
+    "DJANGO_ALLOWED_HOSTS",
+    "localhost,127.0.0.1,web-production-de7b5.up.railway.app",
+)
+ALLOWED_HOSTS = [host.strip() for host in raw_allowed_hosts.split(",") if host.strip()]
 
 
 # Application definition
@@ -78,10 +82,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "config.urls"
+raw_cors_origins = os.getenv(
+    "DJANGO_CORS_ALLOWED_ORIGINS",
+    "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,"
+    "https://web-production-de7b5.up.railway.app",
+)
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:3001",
+    origin.strip() for origin in raw_cors_origins.split(",") if origin.strip()
 ]
 
 # Permitir el header Authorization en CORS (por si falta)
@@ -118,13 +125,23 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "ZxgRFAAVgcNNNsyeWrHjVzMndyvsAJYW",
+        "HOST": "switchback.proxy.rlwy.net",
+        "PORT": "37915",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
