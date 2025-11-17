@@ -5,7 +5,7 @@ import json
 from django.http import HttpResponse
 import stripe
 from django.conf import settings
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes, permission_classes, action
 from rest_framework.response import Response
 import os
 from dotenv import load_dotenv
@@ -13,7 +13,6 @@ from rest_framework import status, viewsets, permissions
 from django.db import transaction
 from tienda.models import Pago, Venta, Productos, DetalleVenta
 from authz.models import Usuario
-from rest_framework.decorators import api_view, authentication_classes, permission_classes, action
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
@@ -699,6 +698,7 @@ class NotificacionViewSet(viewsets.ModelViewSet):
     queryset = Notificacion.objects.select_related("creado_por").prefetch_related("destinatarios")
     serializer_class = NotificacionSerializer
     permission_classes = [permissions.IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -738,7 +738,7 @@ class NotificacionViewSet(viewsets.ModelViewSet):
         data = response_serializer.data
         if resultado is not None:
             data["ultimo_resultado"] = resultado
-        headers = self.get_success_headers(data)
+        headers = self.get_success_headers(response_serializer.data)
         return Response(data, status=status.HTTP_201_CREATED, headers=headers)
 
     def update(self, request, *args, **kwargs):

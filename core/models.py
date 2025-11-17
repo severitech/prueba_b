@@ -4,7 +4,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-from tienda.models import FCMDevice
 from .notifications import enviar_tokens_push
 
 
@@ -57,6 +56,8 @@ class Notificacion(TimeStampedModel):
         return {str(k): ("" if v is None else str(v)) for k, v in payload.items()}
 
     def _tokens_destino(self):
+        from tienda.models import FCMDevice
+
         queryset = FCMDevice.objects.filter(activo=True)
         if not self.enviar_a_todos:
             destinatarios_ids = list(self.destinatarios.values_list("id", flat=True))

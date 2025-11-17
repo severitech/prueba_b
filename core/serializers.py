@@ -83,14 +83,17 @@ class NotificacionSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({"datos_extra": "Debe ser un objeto JSON válido."})
         return attrs
 
-    def create(self, validated_data: dict) -> Notificacion:
+    def create(self, validated_data: dict, **kwargs) -> Notificacion:
         destinatarios = validated_data.pop("destinatarios", [])
+        creado_por = kwargs.get("creado_por")
+        if creado_por is not None:
+            validated_data.setdefault("creado_por", creado_por)
         notificacion = Notificacion.objects.create(**validated_data)
         if destinatarios:
             notificacion.destinatarios.set(destinatarios)
         return notificacion
 
-    def update(self, instance: Notificacion, validated_data: dict) -> Notificacion:
+    def update(self, instance: Notificacion, validated_data: dict, **kwargs) -> Notificacion:
         destinatarios = validated_data.pop("destinatarios", None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
