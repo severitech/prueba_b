@@ -7,10 +7,14 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from datetime import datetime
 
 # Rutas base ajustadas a tu estructura real
-BASE_DIR = Path(__file__).resolve().parent.parent  # ← sube un nivel (sale de /reportes)
-DATASET_PATH = BASE_DIR / "datasets" / "predicciones_cantidades_mensuales.csv"
-OUTPUT_PATH = BASE_DIR / "datasets" / "reporte_predicciones.xlsx"
+# BASE_DIR = Path(__file__).resolve().parent.parent  # ← sube un nivel (sale de /reportes)
+# DATASET_PATH = BASE_DIR / "datasets" / "predicciones_cantidades_mensuales.csv"
+# OUTPUT_PATH = BASE_DIR / "datasets" / "reporte_predicciones.xlsx"
+# Usar las rutas reales del sistema (local + Railway)
+from scikit_learn_ia.paths import DATA_DIR
 
+DATASET_PATH = DATA_DIR / "predicciones_cantidades_mensuales.csv"
+OUTPUT_PATH  = DATA_DIR / "reporte_predicciones.xlsx"
 
 
 def crear_reporte_excel(desde_csv: bool = True, predicciones=None):
