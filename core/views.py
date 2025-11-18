@@ -89,6 +89,7 @@ def crear_checkout_session(request):
         except Usuario.DoesNotExist:
             return Response({"error": "Perfil de usuario no encontrado"}, status=status.HTTP_404_NOT_FOUND)
 
+
         # Construir URLs de retorno
         url_frontend = getattr(settings, 'FRONTEND_URL', 'https://sistemasmart.netlify.app')
         success_url = f"{url_frontend}/pago-exitoso?session_id={{CHECKOUT_SESSION_ID}}"
