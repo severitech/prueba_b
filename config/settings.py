@@ -88,7 +88,11 @@ raw_cors_origins = os.getenv(
     "https://web-production-de7b5.up.railway.app",
 )
 CORS_ALLOWED_ORIGINS = [
-    origin.strip() for origin in raw_cors_origins.split(",") if origin.strip()
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    "https://web-production-de7b5.up.railway.app",
+    "https://sistemasmart.netlify.app",  
 ]
 
 # Permitir el header Authorization en CORS (por si falta)
