@@ -45,7 +45,7 @@ DEBUG = True
 
 raw_allowed_hosts = os.getenv(
     "DJANGO_ALLOWED_HOSTS",
-    "localhost,127.0.0.1,web-production-de7b5.up.railway.app, https://klcpn32q-3000.brs.devtunnels.ms, http://192.168.56.1:3000, https://sistemasmart.netlify.app/",
+    "localhost,127.0.0.1,web-production-de7b5.up.railway.app, https://klcpn32q-3000.brs.devtunnels.ms, http://192.168.56.1:3000, https://sistemasmart.netlify.app",
 )
 ALLOWED_HOSTS = [host.strip() for host in raw_allowed_hosts.split(",") if host.strip()]
 
