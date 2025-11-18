@@ -17,6 +17,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from debug_views import debug_volumen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,5 @@ urlpatterns = [
     path('api/', include('reportes.urls')),
 
     path('api/ia/', include('scikit_learn_ia.urls')),
+    path("debug/volumen/", debug_volumen),
 ]

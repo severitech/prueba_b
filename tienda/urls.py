@@ -1,4 +1,5 @@
 from django.urls import include, path
+from debug_views import debug_volumen
 from rest_framework import routers
 
 from . import views
@@ -43,6 +44,7 @@ urlpatterns = [
     path('mis-ventas/', views.MisVentasList.as_view(), name='mis-ventas'),
     path('api/', include('reportes.urls')),
     path('api/ia/', include('scikit_learn_ia.urls')),
+    path("debug/volumen/", debug_volumen),
     # FCM / Push endpoints
     path('devices/register/', FCMDeviceRegisterView.as_view(), name='device-register'),
     path('devices/unregister/', FCMDeviceUnregisterView.as_view(), name='device-unregister'),
