@@ -90,7 +90,7 @@ raw_cors_origins = os.getenv(
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://localhost:3001",
+    "http://localhost:3000",
     "https://web-production-de7b5.up.railway.app",
     "https://sistemasmart.netlify.app",  
 ]
@@ -144,15 +144,16 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "railway",
         "USER": "postgres",
-        "PASSWORD": "rEKNtbrRcHPuYdzyitBUkjzdLzAurQqc",
-        "HOST": "maglev.proxy.rlwy.net",
-        "PORT": "56471",
-        'CONN_MAX_AGE': 600,
-        'OPTIONS': {
-            'sslmode': 'require',
-        }
+        "PASSWORD": "BsnZEoMfOXrnRgvfZpKOOTHXDgPUCwJL",
+        "HOST": "centerbeam.proxy.rlwy.net",
+        "PORT": "12505",
+        "CONN_MAX_AGE": 600,
+        "OPTIONS": {
+            "sslmode": "require",
+        },
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

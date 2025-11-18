@@ -85,7 +85,7 @@ class Venta(models.Model):
         ('Cancelado', 'Cancelado'),
     ]
 
-    fecha = models.DateTimeField(auto_now_add=True)
+    fecha = models.DateTimeField(auto_now_add=False)
     total = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
     estado = models.CharField(max_length=10, choices=ESTADO_CHOICES, default='Pendiente')
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='ventas')
