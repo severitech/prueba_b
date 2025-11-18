@@ -106,8 +106,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
-    # Opcional: puedes añadir DEFAULT_PERMISSION_CLASSES si lo deseas
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,  # Tamaño de página predeterminado
 }
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -129,23 +131,23 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "ZxgRFAAVgcNNNsyeWrHjVzMndyvsAJYW",
-        "HOST": "switchback.proxy.rlwy.net",
-        "PORT": "37915",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "railway",
+#         "USER": "postgres",
+#         "PASSWORD": "ZxgRFAAVgcNNNsyeWrHjVzMndyvsAJYW",
+#         "HOST": "switchback.proxy.rlwy.net",
+#         "PORT": "37915",
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

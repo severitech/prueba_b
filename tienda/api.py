@@ -60,7 +60,7 @@ class VentaViewSet(viewsets.ModelViewSet):
     serializer_class = VentaSerializer
     permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['cliente']
+    filterset_fields = ['usuario']
 
 class DetalleVentaViewSet(viewsets.ModelViewSet):
     queryset = DetalleVenta.objects.all()
@@ -74,7 +74,7 @@ class GarantiaViewSet(viewsets.ModelViewSet):
     serializer_class = GarantiaSerializer
     permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['producto', 'detalle_venta']
+    filterset_fields = ['producto']
 
 class IngresoViewSet(viewsets.ModelViewSet):
     queryset = Ingreso.objects.all()
@@ -91,7 +91,7 @@ class PromocionViewSet(viewsets.ModelViewSet):
     serializer_class = PromocionSerializer
     permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['activo']
+    filterset_fields = ['estado']
 
 class ProductoPromocionViewSet(viewsets.ModelViewSet):
     queryset = ProductoPromocion.objects.all()
