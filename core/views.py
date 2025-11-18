@@ -105,6 +105,7 @@ def crear_checkout_session(request):
                 "usuario_id": usuario_id,  
                 "descripcion": descripcion_general,
                 "total": str(total),
+                "fecha": datetime.now().isoformat(),
                 "items": json.dumps(items),  # Guardar todos los items como JSON
                 "fecha_solicitud": datetime.now(),  #
             },
